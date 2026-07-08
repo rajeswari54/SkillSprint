@@ -1,0 +1,56 @@
+/* ==========================================================================
+   custom.css — brand accents layered on top of Bootstrap 5 defaults
+   ========================================================================== */
+
+:root{
+  --brand-teal: #2F6F63;
+  --brand-teal-dark: #1F4C43;
+  --brand-ember: #C85A2E;
+  --brand-gold: #B98A2E;
+  --bs-primary: var(--brand-teal);
+  --bs-primary-rgb: 47,111,99;
+}
+
+body{ background: #F6F1E4; }
+
+.btn-primary{ background-color: var(--brand-teal); border-color: var(--brand-teal); }
+.btn-primary:hover, .btn-primary:focus{ background-color: var(--brand-teal-dark); border-color: var(--brand-teal-dark); }
+.text-primary{ color: var(--brand-teal) !important; }
+.nav-tabs .nav-link.active{ color: var(--brand-teal-dark); border-color: #dee2e6 #dee2e6 #fff; font-weight:600; }
+
+.brand-dot{
+  display:block; width:14px; height:14px; border-radius:50%;
+  background:#F6F1E4; border:2px solid #DCD2B8;
+}
+.brand-dot-sm{ width:10px; height:10px; display:inline-block; margin-right:.4rem; background: var(--brand-ember); border-color: var(--brand-ember); }
+
+/* Sidebar */
+.sidebar{ width: 240px; min-height: 100vh; position: sticky; top:0; }
+.sidebar .nav-link{
+  color: rgba(255,255,255,.75); border-radius:.5rem; margin-bottom:.15rem; font-weight:500;
+}
+.sidebar .nav-link:hover{ color:#fff; background: rgba(255,255,255,.08); }
+.sidebar .nav-link.active{ background: var(--brand-teal); color:#fff; font-weight:600; }
+.sidebar .user-chip{ background: rgba(255,255,255,.06); border-radius:.5rem; padding:.5rem .6rem; }
+
+.main-view{ min-height:100vh; }
+
+/* Flashcards */
+.flashcard{ border-left: 4px solid var(--brand-teal); }
+.flashcard .back-content{ white-space: pre-wrap; }
+
+/* Deck cards */
+.deck-card{ border-left: 4px solid var(--brand-teal); cursor:pointer; transition: transform .12s ease, box-shadow .12s ease; }
+.deck-card:hover{ transform: translateY(-2px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); }
+
+/* Score picker */
+.score-opt{ width:40px; }
+.score-opt.selected{ background-color: var(--brand-teal); border-color: var(--brand-teal); color:#fff; }
+
+.badge-role-learner{ background-color:#E1EEE9 !important; color: var(--brand-teal-dark) !important; }
+.badge-role-linguist{ background-color:#F6EAC9 !important; color: var(--brand-gold) !important; }
+.badge-role-admin{ background-color:#FBE7DA !important; color: var(--brand-ember) !important; }
+
+@media (max-width: 767.98px){
+  .main-view{ min-height: auto; }
+}
